@@ -1,0 +1,21 @@
+# @DEBUG
+import os
+debug_index = YOUR_DEBUG_INDEX
+file_name = os.path.basename(__file__)
+print('=' * 32)
+print(f'Start debug {debug_index} in {file_name}')
+print(f'End debug {debug_index} in {file_name}')
+print('=' * 32)
+
+
+python3.10 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+
+git add .
+git commit -m "Commit message"
+git push 
+
+git reset --soft HEAD~1
+git reset
